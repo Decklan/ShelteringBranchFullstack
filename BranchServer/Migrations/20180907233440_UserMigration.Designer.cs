@@ -11,9 +11,10 @@ using System;
 namespace BranchServer.Migrations
 {
     [DbContext(typeof(BranchContext))]
-    partial class BranchContextModelSnapshot : ModelSnapshot
+    [Migration("20180907233440_UserMigration")]
+    partial class UserMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
