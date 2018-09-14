@@ -1,4 +1,16 @@
-nav li {
+li {
     display: inline-block;
     padding: 10px;
 }
+
+.navbar {
+    z-index: 5;
+    background-color: turquoise;
+    width: 100%;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    padding: 3px;
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
