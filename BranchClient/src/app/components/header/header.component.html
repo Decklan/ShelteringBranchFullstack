@@ -5,5 +5,36 @@
       <li><a>Sheltering Branch</a></li>
       <li><a>About Us</a></li>
     </ul>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Login</button>
   </div>
 </nav>
+
+<div class="modal" id="loginModal" [formGroup]="loginForm">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" formControlName="email" placeholder="Enter your email">
+          <div *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid">
+            <p class="text-danger">A valid email is required to log in.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter your password">
+          <div *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid">
+            <p class="text-danger">A valid password of 8 or more characters is required.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="login()" [disabled]="loginForm.invalid">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
