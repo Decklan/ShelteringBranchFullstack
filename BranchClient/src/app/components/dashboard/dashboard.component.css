@@ -1,3 +1,7 @@
+app-dashboard {
+  position: relative;
+}
+
 input {
   height: 25px;
   width: 25%;
