@@ -1,0 +1,21 @@
+li {
+  list-style: none;
+  margin: 10px 10px;
+  display: inline-block;
+  font-size: 20px;
+  transition: .5s;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid;
+  border-radius:50%;
+  position: relative;
+  top: -3px;
+  height: 50px;
+  width: 50px;
+}
+
+li:hover {
+  color: hotpink;
+  border: 1px solid hotpink;
+  transition: .5s;
+}
