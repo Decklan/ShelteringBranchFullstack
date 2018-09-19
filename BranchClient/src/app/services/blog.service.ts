@@ -42,4 +42,22 @@ export class BlogService {
     const endpoint = `${environment.baseServerUrl}${this.apiBase}`;
     return this.http.post<Blog>(endpoint, blog);
   }
+
+  /**
+   * Requests a blog with specified id
+   * @param id Id of blog being requested
+   */
+  getBlogById(id: number): Observable<Blog> {
+    const endpoint = `${environment.baseServerUrl}${this.apiBase}/${id}`;
+    return this.http.get<Blog>(endpoint);
+  }
+
+  /**
+   * Edits existing blog
+   * @param blog The blog to be edited
+   */
+  editBlog(blog: Blog): Observable<Blog> {
+    const endpoint = `${environment.baseServerUrl}${this.apiBase}/${blog.id}`;
+    return this.http.put<Blog>(endpoint, blog);
+  }
 }
