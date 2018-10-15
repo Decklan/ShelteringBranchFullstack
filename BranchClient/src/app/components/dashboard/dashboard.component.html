@@ -1,0 +1,30 @@
+<br> <!-- Needed to add this to move Dashboard below header. Will probably need to be changed once we figure out format -->
+
+<div class="card">
+  <div class="container">
+    <h1>Dashboard</h1>
+    <p>Welcome Decklan's Parents</p>
+    <button type="button" class="btn" (click)="toHome()">Go To Home</button>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="container">
+    <form [formGroup]="blogForm">
+      <div class="form-group">
+          <label>Title:</label><br>
+          <input type="text" class="form-control" formControlName="title"><br><br>
+      </div>
+      <div class="form-group">
+          <label>Blog:</label><br>
+          <textarea type="text" class="form-control" formControlName="body"></textarea><br><br>
+      </div>
+      <div class="form-group">
+          <label>Author:</label><br>
+          <input type="text" class="form-control" formControlName="author"><br><br>
+      </div>
+    </form>
+    <button type="submit" class="btn" (click)="submit()">Post Blog</button>
+  </div>
+</div>
+<br>

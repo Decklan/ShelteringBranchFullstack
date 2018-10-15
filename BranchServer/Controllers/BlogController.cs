@@ -96,7 +96,7 @@ namespace BranchServer
         }
 
         /// <summary>
-        /// Fetches a specific blog from the database matching the given id param
+        /// Asynchronously fetches a specific blog from the database matching the given id param
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Blog with matching id property</returns>
@@ -119,7 +119,7 @@ namespace BranchServer
         }
 
         /// <summary>
-        /// Updates a single blog with the information from the resource param
+        ///Asynchronously updates a single blog with the information from the resource param
         /// </summary>
         /// <param name="id">The id of the blog we are updating</param>
         /// <param name="blogResource">The contents we want to update with</param>
